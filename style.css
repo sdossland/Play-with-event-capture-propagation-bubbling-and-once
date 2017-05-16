@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+}
+.column {
+    height: 100vh;
+    width: 50vw;
+    display: inline-block;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.rectangle {
+    padding: 100px;
+}
+.one {
+   background-color: #006;
+}
+.two {
+    background-color: #33f;
+}
+.three {
+    background-color: #fff;
+}
