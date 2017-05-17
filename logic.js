@@ -6,11 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const rectangles = document.querySelectorAll('.rectangle');
 
   function emphasis(e) {
-    console.log();
+    console.log(this.classList.value);
+    e.stopPropagation();
   }
 
   rectangles.forEach(rectangle =>
-    rectangle.addEventListener('click', emphasis)
-  )
-
+    rectangle.addEventListener('click', emphasis, { capture: true })
+  );
+  
 });

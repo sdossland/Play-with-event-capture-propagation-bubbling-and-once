@@ -8,10 +8,47 @@
 </head>
 <body>
 <div class="left column">
-    <ol>
-        <li></li>
-    </ol>
-</div>
+    <div class="wrapper">
+        <h3>Summary:</h3>
+        <p><em>Event propagation</em> determines the order nested elements receive events they all have a handle on</p>
+        <ul>
+            <li>
+                <p><em>Bubbling -</em> event is first captured and handled by the innermost element, then 'bubbles' up to the respective parent elements. This method is the default.</p>
+            </li>
+            <li>
+                <p><em>Capture -</em> (opposite of bubbling) event is first captured by the outermost element, before it gets passed to the inner elements. To use this, set option 'capture' equal to 'true'.</p>
+            </li>
+            <li>
+                <p><em>Once -</em> similar to unbinding itself. For example, if you have a button that should only be clicked once, can set option 'once' equal to 'true'.</p>
+            </li>
+        </ul>
+        <hr class="thickSeparator" />
+        <h3>Examples:</h3>
+        <p class="subtitle">HTML</p>
+        <img src="htmlCode.png" />
+        <hr class="thinSeparator" />
+        <p class="subtitle">Bubbling</p>
+        <div class="content">
+            <img src="bubblingCode.png" />
+            <p>Returns &#8594 </p>
+            <img src="bubblingReturn.png" />
+        </div>
+        <hr class="thinSeparator" />
+        <p class="subtitle">Capture</p>
+        <div class="content">
+            <img src="captureCode.png" />
+            <p>Returns &#8594 </p>
+            <img src="captureReturn.png" />
+        </div>
+        <hr class="thinSeparator" />
+        <p class="subtitle">Stop Propagation on Capture</p>
+        <div class="content">
+            <img src="stopPropCaptureCode.png" />
+            <p>Returns &#8594 </p>
+            <img src="stopPropCaptureReturn.png" />
+        </div>
+    </div>
+    </div>
 <div class="right column">
     <div class="rectangle one">
         <div class="rectangle two">
